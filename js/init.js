@@ -134,6 +134,25 @@
    });
 
 /*----------------------------------------------------*/
+/* Hero tagline rotation
+------------------------------------------------------*/
+   var heroTagline = $('.hero-tagline');
+   if (heroTagline.length) {
+      var roleTexts = [
+         'Advisor, Data Engineer at Dell | Software Engineer | Data & AI Builder',
+         'Designing cloud data platforms and automation-first solutions',
+         'Turning business problems into production-ready data products'
+      ];
+      var roleIndex = 0;
+      setInterval(function () {
+         roleIndex = (roleIndex + 1) % roleTexts.length;
+         heroTagline.fadeOut(250, function () {
+            heroTagline.text(roleTexts[roleIndex]).fadeIn(250);
+         });
+      }, 3200);
+   }
+
+/*----------------------------------------------------*/
 /*	contact form
 ------------------------------------------------------*/
 
